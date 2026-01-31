@@ -140,18 +140,18 @@ export default async function ProductPage({ params }: Props) {
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-6">
             {product.features.map((feature, index) => (
               <div
                 key={index}
-                className="p-6 bg-background rounded-xl border border-border hover:border-accent/50 hover:shadow-lg transition-all"
+                className="p-3 sm:p-6 bg-background rounded-lg sm:rounded-xl border border-border hover:border-accent/50 hover:shadow-lg transition-all"
               >
-                <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center text-accent mb-4">
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-8 h-8 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl bg-accent/10 flex items-center justify-center text-accent mb-2 sm:mb-4">
+                  <svg className="w-4 h-4 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
-                <h3 className="font-semibold text-primary mb-2">{feature}</h3>
+                <h3 className="font-semibold text-primary text-xs sm:text-base">{feature}</h3>
               </div>
             ))}
           </div>
