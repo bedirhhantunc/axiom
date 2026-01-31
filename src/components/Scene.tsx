@@ -2,6 +2,7 @@
 
 import React, { useRef, useState, useEffect } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
+import * as THREE from "three";
 import { Shape, ExtrudeGeometry } from "three";
 
 // Geometry'yi bir kez oluştur, tekrar kullanılacak
