@@ -135,31 +135,31 @@ export default function AnalizPage() {
       {/* Info Section */}
       <section className="py-12 lg:py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-gradient-to-br from-primary/5 to-accent/5 rounded-2xl p-8 lg:p-12">
-            <h2 className="text-2xl font-bold text-primary mb-6 text-center">
+          <div className="bg-gradient-to-br from-primary/5 to-accent/5 rounded-xl sm:rounded-2xl p-4 sm:p-8 lg:p-12">
+            <h2 className="text-lg sm:text-2xl font-bold text-primary mb-4 sm:mb-6 text-center">
               Nasıl Çalışır?
             </h2>
-            <div className="grid sm:grid-cols-3 gap-8">
+            <div className="grid grid-cols-3 gap-2 sm:gap-8">
               <div className="text-center">
-                <div className="w-12 h-12 mx-auto rounded-full bg-accent text-white flex items-center justify-center font-bold mb-4">
+                <div className="w-8 h-8 sm:w-12 sm:h-12 mx-auto rounded-full bg-accent text-white flex items-center justify-center font-bold text-sm sm:text-base mb-2 sm:mb-4">
                   1
                 </div>
-                <h3 className="font-semibold text-primary mb-2">Modül Seçin</h3>
-                <p className="text-sm text-muted">İhtiyacınıza uygun analiz modülünü seçin ve satın alın.</p>
+                <h3 className="font-semibold text-primary text-xs sm:text-base mb-1 sm:mb-2">Modül Seçin</h3>
+                <p className="text-xs text-muted hidden sm:block">İhtiyacınıza uygun analiz modülünü seçin ve satın alın.</p>
               </div>
               <div className="text-center">
-                <div className="w-12 h-12 mx-auto rounded-full bg-accent text-white flex items-center justify-center font-bold mb-4">
+                <div className="w-8 h-8 sm:w-12 sm:h-12 mx-auto rounded-full bg-accent text-white flex items-center justify-center font-bold text-sm sm:text-base mb-2 sm:mb-4">
                   2
                 </div>
-                <h3 className="font-semibold text-primary mb-2">Formu Doldurun</h3>
-                <p className="text-sm text-muted">Çocuğunuzla ilgili soruları yanıtlayın.</p>
+                <h3 className="font-semibold text-primary text-xs sm:text-base mb-1 sm:mb-2">Formu Doldurun</h3>
+                <p className="text-xs text-muted hidden sm:block">Çocuğunuzla ilgili soruları yanıtlayın.</p>
               </div>
               <div className="text-center">
-                <div className="w-12 h-12 mx-auto rounded-full bg-accent text-white flex items-center justify-center font-bold mb-4">
+                <div className="w-8 h-8 sm:w-12 sm:h-12 mx-auto rounded-full bg-accent text-white flex items-center justify-center font-bold text-sm sm:text-base mb-2 sm:mb-4">
                   3
                 </div>
-                <h3 className="font-semibold text-primary mb-2">Rapor Alın</h3>
-                <p className="text-sm text-muted">Detaylı rapor ve eylem planınızı hemen görün.</p>
+                <h3 className="font-semibold text-primary text-xs sm:text-base mb-1 sm:mb-2">Rapor Alın</h3>
+                <p className="text-xs text-muted hidden sm:block">Detaylı rapor ve eylem planınızı hemen görün.</p>
               </div>
             </div>
           </div>
