@@ -179,14 +179,14 @@ export default function Pricing() {
         <PricingSwitch onSwitch={setSelectedType} selected={selectedType} />
 
         {/* Pricing Cards */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6">
           {pricingData.map((item, index) => (
             <motion.div
               key={item.name}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
-              className={`relative rounded-2xl border p-6 ${
+              className={`relative rounded-xl sm:rounded-2xl border p-3 sm:p-6 ${
                 item.popular
                   ? "ring-2 ring-accent bg-accent/5 border-accent/30"
                   : item.restricted
@@ -213,38 +213,38 @@ export default function Pricing() {
               )}
 
               {/* Header */}
-              <div className="mb-4">
-                <h3 className="text-xl font-bold text-primary mb-2">
+              <div className="mb-2 sm:mb-4">
+                <h3 className="text-sm sm:text-xl font-bold text-primary mb-1 sm:mb-2">
                   {item.name}
                 </h3>
-                <p className="text-sm text-muted">{item.description}</p>
+                <p className="text-xs sm:text-sm text-muted hidden sm:block">{item.description}</p>
               </div>
 
               {/* Price */}
-              <div className="flex flex-col mb-6">
+              <div className="flex flex-col mb-3 sm:mb-6">
                 {selectedType === "bireysel" && item.oldPrice && (
-                  <span className="text-lg text-muted line-through mb-1">
+                  <span className="text-sm sm:text-lg text-muted line-through mb-1">
                     {formatPrice(item.oldPrice)} ₺
                   </span>
                 )}
-                <div className="flex items-baseline">
+                <div className="flex items-baseline flex-wrap">
                   <motion.span
                     key={`${item.name}-${selectedType}`}
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
-                    className="text-3xl font-bold text-primary"
+                    className="text-lg sm:text-3xl font-bold text-primary"
                   >
                     {selectedType === "bireysel"
                       ? `${formatPrice(item.bireysel)} ₺`
                       : item.kurumsal}
                   </motion.span>
-                  <span className="text-muted text-sm ml-2">/ analiz</span>
+                  <span className="text-muted text-xs sm:text-sm ml-1 sm:ml-2">/ analiz</span>
                 </div>
               </div>
 
               {/* CTA Button */}
               <button
-                className={`w-full mb-6 p-4 text-base font-semibold rounded-xl transition-all ${
+                className={`w-full mb-3 sm:mb-6 p-2 sm:p-4 text-xs sm:text-base font-semibold rounded-lg sm:rounded-xl transition-all ${
                   item.popular
                     ? "bg-gradient-to-t from-accent to-accent/90 shadow-lg shadow-accent/30 border border-accent text-white hover:shadow-xl"
                     : item.restricted
@@ -257,8 +257,8 @@ export default function Pricing() {
                   : "Satın Al"}
               </button>
 
-              {/* Features */}
-              <div className="space-y-3 pt-4 border-t border-border/50">
+              {/* Features - Hidden on mobile */}
+              <div className="hidden sm:block space-y-3 pt-4 border-t border-border/50">
                 <h4 className="font-semibold text-sm text-primary mb-3">
                   Paket içeriği:
                 </h4>

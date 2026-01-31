@@ -63,34 +63,25 @@ export default function HowItWorks() {
           {/* Connection Line - Desktop */}
           <div className="hidden lg:block absolute top-24 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-accent/30 to-transparent" />
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
             {steps.map((step, index) => (
               <div key={index} className="relative">
                 {/* Step Card */}
-                <div className="relative bg-card rounded-2xl border border-border p-6 hover:border-accent/50 hover:shadow-lg transition-all duration-300 h-full">
+                <div className="relative bg-card rounded-xl sm:rounded-2xl border border-border p-3 sm:p-4 lg:p-6 hover:border-accent/50 hover:shadow-lg transition-all duration-300 h-full">
                   {/* Number Badge */}
-                  <div className="absolute -top-4 left-6 px-3 py-1 bg-accent text-white text-sm font-bold rounded-full">
+                  <div className="absolute -top-3 left-3 sm:left-6 px-2 sm:px-3 py-0.5 sm:py-1 bg-accent text-white text-xs sm:text-sm font-bold rounded-full">
                     {step.number}
                   </div>
 
                   {/* Icon */}
-                  <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center text-accent mb-4 mt-2">
-                    {step.icon}
+                  <div className="w-10 h-10 sm:w-14 sm:h-14 rounded-lg sm:rounded-xl bg-accent/10 flex items-center justify-center text-accent mb-2 sm:mb-4 mt-2">
+                    <div className="scale-75 sm:scale-100">{step.icon}</div>
                   </div>
 
                   {/* Content */}
-                  <h3 className="text-xl font-bold text-primary mb-2">{step.title}</h3>
-                  <p className="text-muted text-sm">{step.description}</p>
+                  <h3 className="text-sm sm:text-lg lg:text-xl font-bold text-primary mb-1 sm:mb-2">{step.title}</h3>
+                  <p className="text-muted text-xs sm:text-sm hidden sm:block">{step.description}</p>
                 </div>
-
-                {/* Arrow - Mobile/Tablet */}
-                {index < steps.length - 1 && (
-                  <div className="lg:hidden flex justify-center my-4">
-                    <svg className="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-                    </svg>
-                  </div>
-                )}
               </div>
             ))}
           </div>

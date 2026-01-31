@@ -74,26 +74,41 @@ const AnimatedBoxes = ({ isVisible }: { isVisible: boolean }) => {
 
 export const Scene = () => {
   const [isVisible, setIsVisible] = useState(true);
+  const [isMobile, setIsMobile] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    // Mobil kontrolü
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         setIsVisible(entry.isIntersecting);
       },
-      { threshold: 0.1 } // %10 görünür olduğunda tetikle
+      { threshold: 0.1 }
     );
 
     if (containerRef.current) {
       observer.observe(containerRef.current);
     }
 
-    return () => observer.disconnect();
+    return () => {
+      observer.disconnect();
+      window.removeEventListener('resize', checkMobile);
+    };
   }, []);
+
+  // Mobilde kamerayı uzaklaştır (daha küçük görünsün)
+  const cameraPosition: [number, number, number] = isMobile ? [5, 5, 35] : [5, 5, 20];
+  const cameraFov = isMobile ? 50 : 40;
 
   return (
     <div ref={containerRef} className="w-full h-full absolute inset-0 z-0">
-      <Canvas camera={{ position: [5, 5, 20], fov: 40 }}>
+      <Canvas camera={{ position: cameraPosition, fov: cameraFov }}>
         <ambientLight intensity={10} />
         <directionalLight position={[10, 10, 5]} intensity={12} />
         <directionalLight position={[-10, -10, -5]} intensity={5} color="#FF6B35" />
