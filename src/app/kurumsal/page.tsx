@@ -151,17 +151,17 @@ export default function KurumsalPage() {
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-8">
             {benefits.map((benefit, index) => (
               <div
                 key={index}
-                className="p-6 bg-background rounded-2xl border border-border hover:border-accent/50 hover:shadow-lg transition-all"
+                className="p-3 sm:p-6 bg-background rounded-xl sm:rounded-2xl border border-border hover:border-accent/50 hover:shadow-lg transition-all"
               >
-                <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center text-accent mb-4">
-                  {benefit.icon}
+                <div className="w-8 h-8 sm:w-14 sm:h-14 rounded-lg sm:rounded-xl bg-accent/10 flex items-center justify-center text-accent mb-2 sm:mb-4">
+                  <div className="scale-75 sm:scale-100">{benefit.icon}</div>
                 </div>
-                <h3 className="text-xl font-bold text-primary mb-2">{benefit.title}</h3>
-                <p className="text-muted">{benefit.description}</p>
+                <h3 className="text-xs sm:text-xl font-bold text-primary mb-1 sm:mb-2">{benefit.title}</h3>
+                <p className="text-muted text-xs sm:text-base hidden sm:block">{benefit.description}</p>
               </div>
             ))}
           </div>
