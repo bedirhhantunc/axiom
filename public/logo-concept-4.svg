@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100">
+  <!-- Konsept 4: Entegre tasarım - A harfi üçgen olarak -->
+  <!-- Açık tema -->
+
+  <!-- A harfi geometrik üçgen olarak -->
+  <g transform="translate(20, 20)">
+    <polygon points="25,0 50,55 0,55" fill="none" stroke="#1a1a2e" stroke-width="3.5"/>
+    <line x1="12" y1="38" x2="38" y2="38" stroke="#1a1a2e" stroke-width="3"/>
+  </g>
+
+  <!-- XIOM devamı -->
+  <text x="85" y="62" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="42" font-weight="700" letter-spacing="3" fill="#1a1a2e">XIOM</text>
+</svg>

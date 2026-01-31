@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100">
+  <!-- Konsept 3: Minimal üçgen (temel/stabilite) + tipografi -->
+  <!-- Açık tema -->
+
+  <!-- Üçgen - temel taşı sembolü -->
+  <polygon points="35,15 60,70 10,70" fill="none" stroke="#1a1a2e" stroke-width="3"/>
+  <!-- Üçgenin içinde nokta - kesinlik -->
+  <circle cx="35" cy="52" r="4" fill="#1a1a2e"/>
+
+  <!-- AXIOM tipografisi -->
+  <text x="85" y="62" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="42" font-weight="700" letter-spacing="4" fill="#1a1a2e">AXIOM</text>
+</svg>

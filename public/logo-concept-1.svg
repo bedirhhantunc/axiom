@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100">
+  <!-- Konsept 1: İki nokta + çizgi aksiyomu, AXIOM tipografisi -->
+  <!-- Açık tema (koyu logo) -->
+
+  <!-- Geometrik element: iki nokta arası çizgi -->
+  <circle cx="30" cy="50" r="6" fill="#1a1a2e"/>
+  <line x1="36" y1="50" x2="64" y2="50" stroke="#1a1a2e" stroke-width="3"/>
+  <circle cx="70" cy="50" r="6" fill="#1a1a2e"/>
+
+  <!-- AXIOM tipografisi -->
+  <text x="95" y="62" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="42" font-weight="700" letter-spacing="4" fill="#1a1a2e">AXIOM</text>
+</svg>

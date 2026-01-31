@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100">
+  <!-- Konsept 2: X harfi geometrik vurgu + noktalar -->
+  <!-- Açık tema -->
+
+  <!-- Geometrik X işareti noktalarla -->
+  <g transform="translate(25, 25)">
+    <!-- Sol üst nokta -->
+    <circle cx="5" cy="5" r="5" fill="#1a1a2e"/>
+    <!-- Sağ üst nokta -->
+    <circle cx="45" cy="5" r="5" fill="#1a1a2e"/>
+    <!-- Çapraz çizgiler -->
+    <line x1="10" y1="10" x2="40" y2="40" stroke="#1a1a2e" stroke-width="3"/>
+    <line x1="40" y1="10" x2="10" y2="40" stroke="#1a1a2e" stroke-width="3"/>
+    <!-- Sol alt nokta -->
+    <circle cx="5" cy="45" r="5" fill="#1a1a2e"/>
+    <!-- Sağ alt nokta -->
+    <circle cx="45" cy="45" r="5" fill="#1a1a2e"/>
+  </g>
+
+  <!-- AXIOM tipografisi (X hariç) -->
+  <text x="95" y="62" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="42" font-weight="700" letter-spacing="4" fill="#1a1a2e">A</text>
+  <text x="172" y="62" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="42" font-weight="700" letter-spacing="4" fill="#1a1a2e">IOM</text>
+</svg>
