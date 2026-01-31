@@ -85,17 +85,17 @@ export default function Technology() {
             </p>
 
             {/* Features Grid */}
-            <div className="grid sm:grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 gap-2 sm:gap-4">
               {features.map((feature, index) => (
                 <div
                   key={index}
-                  className="p-4 bg-[#1a2a3a] rounded-xl border-2 border-white hover:border-accent transition-colors"
+                  className="p-2 sm:p-4 bg-[#1a2a3a] rounded-lg sm:rounded-xl border sm:border-2 border-white hover:border-accent transition-colors"
                 >
-                  <div className="w-10 h-10 rounded-lg bg-accent flex items-center justify-center text-white mb-3">
-                    {feature.icon}
+                  <div className="w-7 h-7 sm:w-10 sm:h-10 rounded-md sm:rounded-lg bg-accent flex items-center justify-center text-white mb-1 sm:mb-3">
+                    <div className="scale-75 sm:scale-100">{feature.icon}</div>
                   </div>
-                  <h3 className="font-bold mb-1 text-white">{feature.title}</h3>
-                  <p className="text-sm text-white">{feature.description}</p>
+                  <h3 className="font-bold mb-1 text-white text-xs sm:text-base">{feature.title}</h3>
+                  <p className="text-xs text-white hidden sm:block">{feature.description}</p>
                 </div>
               ))}
             </div>
