@@ -1,10 +1,12 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import Lottie from "lottie-react";
 import kurumsalAnimation from "../../../public/animations/kurumsal-ani.json";
 
 export default function KurumsalPage() {
+  const [expandedAudience, setExpandedAudience] = useState<number | null>(null);
   const benefits = [
     {
       title: "Toplu Lisans Avantajı",
@@ -180,18 +182,59 @@ export default function KurumsalPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 xl:grid-cols-4 gap-2 sm:gap-6">
+          {/* Mobile: Accordion */}
+          <div className="sm:hidden space-y-2">
             {audiences.map((audience, index) => (
               <div
                 key={index}
-                className="bg-card rounded-xl sm:rounded-2xl border border-border p-3 sm:p-8 hover:shadow-xl transition-shadow"
+                className="bg-card rounded-xl border border-border overflow-hidden"
               >
-                <h3 className="text-sm sm:text-2xl font-bold text-primary mb-1 sm:mb-4">{audience.title}</h3>
-                <p className="text-muted text-xs sm:text-base mb-2 sm:mb-6 hidden sm:block">{audience.description}</p>
-                <ul className="space-y-2 sm:space-y-3 hidden sm:block">
+                <button
+                  onClick={() => setExpandedAudience(expandedAudience === index ? null : index)}
+                  className="w-full p-4 flex items-center justify-between text-left"
+                >
+                  <h3 className="text-sm font-bold text-primary">{audience.title}</h3>
+                  <svg
+                    className={`w-5 h-5 text-accent transition-transform ${expandedAudience === index ? 'rotate-180' : ''}`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                {expandedAudience === index && (
+                  <div className="px-4 pb-4 border-t border-border/50">
+                    <p className="text-muted text-xs mt-3 mb-3">{audience.description}</p>
+                    <ul className="space-y-2">
+                      {audience.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-center gap-2 text-foreground text-xs">
+                          <svg className="w-4 h-4 text-accent flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                          </svg>
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+
+          {/* Desktop: Grid */}
+          <div className="hidden sm:grid sm:grid-cols-2 xl:grid-cols-4 gap-6">
+            {audiences.map((audience, index) => (
+              <div
+                key={index}
+                className="bg-card rounded-2xl border border-border p-8 hover:shadow-xl transition-shadow"
+              >
+                <h3 className="text-2xl font-bold text-primary mb-4">{audience.title}</h3>
+                <p className="text-muted mb-6">{audience.description}</p>
+                <ul className="space-y-3">
                   {audience.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center gap-2 sm:gap-3 text-foreground text-sm">
-                      <svg className="w-4 h-4 sm:w-5 sm:h-5 text-accent flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <li key={featureIndex} className="flex items-center gap-3 text-foreground text-sm">
+                      <svg className="w-5 h-5 text-accent flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                       </svg>
                       {feature}
