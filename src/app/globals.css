@@ -1,26 +1,177 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Axiom Renk Paleti */
+  --background: #F8F9FA;        /* Kırık Beyaz - Zemin */
+  --foreground: #2C3E50;        /* Koyu Lacivert - Ana renk */
+  --primary: #2C3E50;           /* Koyu Lacivert - Ciddiyet */
+  --accent: #FF6B35;            /* Turuncu - Aksiyon */
+  --accent-hover: #E55A2B;      /* Turuncu hover */
+  --muted: #64748B;             /* Gri - İkincil metin (daha açık) */
+  --border: #E2E8F0;            /* Border rengi */
+  --card: #FFFFFF;              /* Kart arka planı */
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-card: var(--card);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Base Styles */
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+}
+
+/* Typography - Metin Hiyerarşisi */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* CRITICAL: Ensure text-white ALWAYS works on dark backgrounds */
+/* Bu kural Tailwind'in text-white sınıfının her zaman çalışmasını garantiler */
+.text-white,
+.text-white h1, .text-white h2, .text-white h3, .text-white h4, .text-white h5, .text-white h6,
+.text-white p, .text-white span, .text-white li, .text-white a {
+  color: #ffffff !important;
+}
+
+/* text-primary için aynı garanti */
+.text-primary,
+.text-primary h1, .text-primary h2, .text-primary h3, .text-primary h4, .text-primary h5, .text-primary h6 {
+  color: var(--primary) !important;
+}
+
+/* text-muted için aynı garanti */
+.text-muted,
+.text-muted p, .text-muted span, .text-muted li {
+  color: var(--muted) !important;
+}
+
+/* text-accent için aynı garanti */
+.text-accent,
+.text-accent h1, .text-accent h2, .text-accent h3, .text-accent span {
+  color: var(--accent) !important;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3.75rem);
+}
+
+h2 {
+  font-size: clamp(1.75rem, 4vw, 3rem);
+}
+
+h3 {
+  font-size: clamp(1.25rem, 3vw, 1.5rem);
+}
+
+/* Mobile-first spacing */
+section {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  section {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  section {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Touch-friendly targets for mobile */
+@media (max-width: 768px) {
+  button, a {
+    min-height: 44px;
+  }
+
+  input, select, textarea {
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+/* Focus states for accessibility */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Selection color */
+::selection {
+  background: var(--accent);
+  color: white;
+}
+
+/* Smooth transitions */
+* {
+  transition-property: color, background-color, border-color, box-shadow;
+  transition-duration: 150ms;
+  transition-timing-function: ease-in-out;
+}
+
+/* Disable transitions for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Loading skeleton animation */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.skeleton {
+  background: linear-gradient(90deg, var(--border) 25%, var(--background) 50%, var(--border) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
 }

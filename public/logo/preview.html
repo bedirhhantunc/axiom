@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AXIOM Logo Paketi</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      padding: 40px;
+      background: #f5f5f5;
+    }
+    h1 { text-align: center; margin-bottom: 40px; color: #1a1a1a; }
+    .section { margin-bottom: 50px; }
+    .section h2 {
+      font-size: 14px;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: white;
+      border-radius: 16px;
+      padding: 30px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    }
+    .card.dark { background: #1a1a1a; }
+    .card h3 { font-size: 14px; color: #666; margin-bottom: 20px; }
+    .card.dark h3 { color: #999; }
+    .logo-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 200px;
+    }
+    .logo-container img { max-width: 100%; max-height: 200px; }
+    .logo-container.small img { max-height: 100px; }
+    .file-info {
+      margin-top: 15px;
+      font-size: 12px;
+      color: #aaa;
+      font-family: monospace;
+    }
+    .icon-row {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .icon-box {
+      width: 100px;
+      height: 100px;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    .icon-box.light { background: #fff; }
+    .icon-box.dark { background: #1a1a1a; }
+    .icon-box img { width: 70px; height: 70px; }
+    .favicon-box { width: 48px; height: 48px; border-radius: 10px; }
+    .favicon-box img { width: 32px; height: 32px; }
+  </style>
+</head>
+<body>
+  <h1>AXIOM Logo Paketi</h1>
+
+  <div class="section">
+    <h2>Ana Logo (Tam)</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Açık Tema</h3>
+        <div class="logo-container">
+          <img src="axiom-logo-light.svg" alt="AXIOM Logo Light">
+        </div>
+        <div class="file-info">axiom-logo-light.svg</div>
+      </div>
+      <div class="card dark">
+        <h3>Koyu Tema</h3>
+        <div class="logo-container">
+          <img src="axiom-logo-dark.svg" alt="AXIOM Logo Dark">
+        </div>
+        <div class="file-info" style="color:#555">axiom-logo-dark.svg</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Sadece İkon</h2>
+    <div class="icon-row">
+      <div>
+        <div class="icon-box light">
+          <img src="axiom-icon-light.svg" alt="Icon Light">
+        </div>
+        <div class="file-info" style="text-align:center">axiom-icon-light.svg</div>
+      </div>
+      <div>
+        <div class="icon-box dark">
+          <img src="axiom-icon-dark.svg" alt="Icon Dark">
+        </div>
+        <div class="file-info" style="text-align:center">axiom-icon-dark.svg</div>
+      </div>
+      <div>
+        <div class="icon-box light favicon-box">
+          <img src="favicon.svg" alt="Favicon">
+        </div>
+        <div class="file-info" style="text-align:center">favicon.svg</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Kullanım Alanları</h2>
+    <table style="width:100%; border-collapse:collapse; background:white; border-radius:12px; overflow:hidden;">
+      <thead>
+        <tr style="background:#f9f9f9;">
+          <th style="padding:15px; text-align:left; border-bottom:1px solid #eee;">Alan</th>
+          <th style="padding:15px; text-align:left; border-bottom:1px solid #eee;">Dosya</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td style="padding:15px; border-bottom:1px solid #eee;">Web sitesi / Landing page</td><td style="padding:15px; border-bottom:1px solid #eee;"><code>axiom-logo-*.svg</code></td></tr>
+        <tr><td style="padding:15px; border-bottom:1px solid #eee;">Mobil app splash</td><td style="padding:15px; border-bottom:1px solid #eee;"><code>axiom-logo-*.svg</code></td></tr>
+        <tr><td style="padding:15px; border-bottom:1px solid #eee;">App icon / Profil</td><td style="padding:15px; border-bottom:1px solid #eee;"><code>axiom-icon-*.svg</code></td></tr>
+        <tr><td style="padding:15px; border-bottom:1px solid #eee;">Browser favicon</td><td style="padding:15px; border-bottom:1px solid #eee;"><code>favicon.svg</code></td></tr>
+        <tr><td style="padding:15px; border-bottom:1px solid #eee;">Kartvizit</td><td style="padding:15px; border-bottom:1px solid #eee;"><code>axiom-logo-light.svg</code></td></tr>
+        <tr><td style="padding:15px;">Beyaz önlük nakış</td><td style="padding:15px;"><code>axiom-icon-light.svg</code></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+</body>
+</html>
