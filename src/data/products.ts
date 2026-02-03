@@ -86,7 +86,7 @@ export const products: ProductDetail[] = [
     id: "davranis-analisti",
     slug: "davranis-analisti",
     name: "Davranışsal ve Duygusal Problem Tarama",
-    shortName: "Davranış Analisti",
+    shortName: "Davranış ve Duygu Analisti",
     tagline: "Davranışsal ve duygusal riskleri tespit edin",
     description: "Çocuklarda gözlemlenen davranışsal ve duygusal riskleri tespit eder. Etik sınırları korumak için sadece uzmanlara açıktır.",
     longDescription: "Davranışsal ve Duygusal Problem Tarama, Axiom'un en hassas ve kapsamlı modülüdür. Anksiyete, depresyon, saldırganlık, dikkat eksikliği gibi kritik davranışsal ve duygusal konuları derinlemesine analiz eder. Etik değerlere bağlılığımız gereği, bu modül yalnızca lisanslı uzmanlara açıktır. Problemlerin ortadan kaldırılmasına yönelik çocuğa özel 'Bireysel Destek Planı' sunar.",

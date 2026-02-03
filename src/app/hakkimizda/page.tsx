@@ -60,10 +60,10 @@ export default function HakkimizdaPage() {
       description: "İstanbul Teknik Üniversitesi Matematik Mühendisliği mezunu olan Furkan Bora Murat, Axiom'un sistem mimarisine hakim olup yazılım geliştirme süreçlerinde aktif rol almaktadır.",
     },
     {
-      name: "Öğr. Gör. Dr. Emre Bozdemir",
+      name: "Dr. Emre Bozdemir",
       role: "Bilimsel Danışman",
       initials: "EB",
-      description: "Bursa Uludağ Üniversitesi Çocuk Gelişimi Bölüm Başkanı olan Dr. Emre Bozdemir, çocuk gelişimi ve eğitim alanındaki akademik birikimini yapay zeka teknolojisiyle birleştirerek Axiom'un bilimsel altyapısının oluşturulmasına katkı sağlamaktadır.",
+      description: "Bursa Uludağ Üniversitesi Çocuk Gelişimi Bölüm Başkanı olan Dr. Emre Bozdemir, çocuk gelişimi ve eğitimi alanındaki akademik birikimini yapay zeka teknolojisiyle birleştirerek Axiom'un bilimsel altyapısının oluşturulmasına katkı sağlamaktadır.",
     },
   ];
 
@@ -160,7 +160,7 @@ export default function HakkimizdaPage() {
                 </div>
                 <h3 className="text-2xl font-bold mb-4 text-white">Axiom AI</h3>
                 <p className="text-white mb-6">
-                  Çocuk gelişimi ve pedagoji alanında uzmanlaşmış yapay zeka teknolojisi.
+                  Pedagoji alanında uzmanlaşmış, bilimsel yöntem ve tekniklere dayalı yeni nesil yapay zeka teknolojisi.
                 </p>
                 <ul className="space-y-3">
                   {[
@@ -184,7 +184,7 @@ export default function HakkimizdaPage() {
                 Arkasındaki Teknoloji
               </h2>
               <p className="text-lg text-muted mb-6">
-                Axiom AI, çocuk gelişimi ve eğitim alanında uzmanlaşmış
+                Axiom AI, pedagoji alanında uzmanlaşmış, bilimsel yöntem ve tekniklere dayalı
                 yeni nesil yapay zeka teknolojisidir.
               </p>
               <p className="text-lg text-muted mb-6">

@@ -150,7 +150,7 @@ export default function Contact() {
                 <select className="w-full px-4 py-3 rounded-xl border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-all">
                   <option value="">Seçiniz</option>
                   <option value="gelisim">Gelişim Takipçisi</option>
-                  <option value="davranis">Davranış Analisti</option>
+                  <option value="davranis">Davranış ve Duygu Analisti</option>
                   <option value="ogrenme">Öğrenme Mimarı</option>
                   <option value="kariyer">Kariyer Pusulası</option>
                   <option value="aile">Aile Koçu</option>

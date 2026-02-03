@@ -2,8 +2,8 @@ export default function HowItWorks() {
   const steps = [
     {
       number: "01",
-      title: "Formu Doldurun",
-      description: "Çocuğunuzla ilgili temel bilgileri ve gözlemlerinizi paylaşın. Form, seçtiğiniz modüle göre özelleştirilir.",
+      title: "Bilimsel Temelli Bilgi Toplar",
+      description: "Bilimsel teknik ve yöntemlerle eğitilmiş AXIOM AI özelleştirilmiş sorular sorar. Çocuğunuzla/öğrencinizle/danışanınızla ilgili temel bilgiler, gözlemler ya da önceden var olan farklı veriler tarafınızca seçtiğiniz modülere yüklenir.",
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -12,8 +12,8 @@ export default function HowItWorks() {
     },
     {
       number: "02",
-      title: "AI Analiz Eder",
-      description: "Axiom AI, verilerinizi bilimsel metodoloji ile analiz eder ve kanıta dayalı değerlendirme yapar.",
+      title: "Tarar ve Analiz Eder",
+      description: "Axiom AI, tüm bilgileri bilimsel metodoloji ile tarar, analiz eder ve kanıta dayalı çalışır.",
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -22,8 +22,8 @@ export default function HowItWorks() {
     },
     {
       number: "03",
-      title: "Rapor Oluşur",
-      description: "Detaylı rapor hazırlanır: Sayısal ve sözel analiz, güçlü ve gelişime açık alanlar belirlenir.",
+      title: "Rapor Oluşturur",
+      description: "İhtiyaç duyduğunuz bilgiler detaylı olarak raporlanır ve sizlere sunulur. Riskli durumlar belirlenerek, derecelendirilir.",
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -32,8 +32,8 @@ export default function HowItWorks() {
     },
     {
       number: "04",
-      title: "Eylem Planı Alın",
-      description: "Kişiselleştirilmiş yol haritası: Çocuklar için 'Bireysel Destek Planı', aileler için 'Eğitim Programı'.",
+      title: "Planlar ve Takip Eder",
+      description: "Her bireye ve aileye özel oluşturulmuş 'Bireysel Destek Planı' ve 'Eğitim Programı' hazırlanır. Süreç takip edilir.",
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />

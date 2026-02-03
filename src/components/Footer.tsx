@@ -19,7 +19,7 @@ export default function Footer() {
               Kuşkudan Kesinliğe
             </p>
             <p className="text-white text-sm leading-relaxed">
-              2-18 yaş arası çocuklar ve aileleri için yapay zeka destekli pedagojik ürünler.
+              2-18 Yaş Arası Çocuklar ve Aileleri İçin Yapay Zeka Destekli Pedagojik Çözümler.
             </p>
           </div>
 
@@ -34,7 +34,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/urunler/davranis-analisti" className="hover:text-accent transition-colors">
-                  Davranış Analisti
+                  Davranış ve Duygu Analisti
                 </Link>
               </li>
               <li>

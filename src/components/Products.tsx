@@ -32,8 +32,8 @@ const products: Product[] = [
   },
   {
     id: "davranis-analisti",
-    name: "Axiom Davranış Analisti",
-    shortName: "Davranış Analisti",
+    name: "Axiom Davranış ve Duygu Analisti",
+    shortName: "Davranış ve Duygu Analisti",
     description: "Anksiyete, depresyon, DEHB, saldırganlık gibi hassas konuları tarar. Etik sınırları korumak için sadece uzmanlara açıktır.",
     targetAudience: "Psikolog ve Psikiyatrlar",
     features: ["Davranış Problemi Tarama", "Duygusal Problem Tarama", "Detaylı Rapor", "Bireysel Destek Planı"],
@@ -101,7 +101,7 @@ export default function Products() {
             Modüllerimiz
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary mb-6">
-            5 Kapsamlı Analiz Modülü
+            MODÜLLER
           </h2>
           <p className="text-lg text-muted">
             Her biri farklı ihtiyaçlara özelleşmiş, bilimsel temelli yapay zeka analiz çözümleri.

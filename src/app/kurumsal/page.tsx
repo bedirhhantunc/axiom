@@ -271,7 +271,7 @@ export default function KurumsalPage() {
               <tbody>
                 {[
                   { name: "Gelişim Takipçisi", oldPrice: "16.000 ₺", newPrice: "9.999 ₺" },
-                  { name: "Davranış Analisti", oldPrice: "22.000 ₺", newPrice: "14.999 ₺", restricted: true },
+                  { name: "Davranış ve Duygu Analisti", oldPrice: "22.000 ₺", newPrice: "14.999 ₺", restricted: true },
                   { name: "Öğrenme Mimarı", oldPrice: "18.000 ₺", newPrice: "11.999 ₺" },
                   { name: "Kariyer Pusulası", oldPrice: "18.000 ₺", newPrice: "11.999 ₺" },
                   { name: "Aile Koçu", oldPrice: "18.000 ₺", newPrice: "11.999 ₺" },

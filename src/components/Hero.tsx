@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
 
@@ -60,48 +59,23 @@ export default function Hero() {
           {/* Main Heading with Text Stroke */}
           <motion.h1
             variants={itemVariants}
-            className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-primary leading-tight mb-6 max-w-4xl"
+            className="text-6xl sm:text-7xl lg:text-8xl xl:text-9xl font-bold text-primary leading-tight mb-8 max-w-5xl"
             style={{
               WebkitTextStroke: "2px rgba(255, 255, 255, 0.9)",
               paintOrder: "stroke fill",
             }}
           >
-            Kuşkudan Kesinliğe
-            <motion.span
-              className="block text-accent mt-2"
-              style={{
-                WebkitTextStroke: "2.5px rgba(255, 255, 255, 0.95)",
-                paintOrder: "stroke fill",
-              }}
-            >
-              Çocuğunuzun Gelişimsel Haritası
-            </motion.span>
+            Kuşkudan, Kesinliğe...
           </motion.h1>
 
           {/* Subheading with Border */}
           <motion.div
             variants={itemVariants}
-            className="px-6 py-4 border-2 border-white rounded-2xl bg-[#2C3E50] mb-10 max-w-2xl shadow-2xl"
+            className="px-8 py-5 border-2 border-accent rounded-2xl bg-accent mb-10 max-w-3xl shadow-2xl"
           >
-            <p className="text-lg sm:text-xl text-white font-semibold leading-relaxed text-center">
-              2-18 yaş arası çocuklar ve aileleri için yapay zeka destekli pedagojik ürünler.
+            <p className="text-xl sm:text-2xl lg:text-3xl text-white font-semibold leading-relaxed text-center">
+              2-18 Yaş Arası Çocuklar ve Aileleri İçin Yapay Zeka Destekli Pedagojik Çözümler.
             </p>
-          </motion.div>
-
-          {/* CTA Button */}
-          <motion.div
-            variants={itemVariants}
-            className="flex justify-center mb-12"
-          >
-            <Link
-              href="/analiz"
-              className="group inline-flex items-center justify-center px-12 py-5 text-xl font-semibold text-white bg-accent hover:bg-accent-hover rounded-xl transition-all duration-300 shadow-xl shadow-accent/30 hover:shadow-2xl hover:shadow-accent/40 hover:-translate-y-1"
-            >
-              Ücretsiz Değerlendirme Başlat
-              <svg className="w-6 h-6 ml-3 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-              </svg>
-            </Link>
           </motion.div>
 
         </motion.div>

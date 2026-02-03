@@ -33,7 +33,7 @@ const pricingData: PricingItem[] = [
     ],
   },
   {
-    name: "Davranış Analisti",
+    name: "Davranış ve Duygu Analisti",
     bireysel: 14999,
     oldPrice: 22000,
     kurumsal: "Kuruma Özel",

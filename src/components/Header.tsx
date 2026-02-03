@@ -19,8 +19,8 @@ export default function Header() {
   const navItems = [
     { label: "Anasayfa", href: "/" },
     { label: "Hakkımızda", href: "/hakkimizda" },
-    { label: "Modüller", href: getLink("#urunler") },
-    { label: "Paketler", href: getLink("#fiyatlandirma") },
+    { label: "Modüller", href: "/moduller" },
+    { label: "İletişim", href: getLink("#iletisim") },
   ];
 
   return (
@@ -90,7 +90,7 @@ export default function Header() {
               href="/analiz"
               className="inline-flex items-center justify-center px-5 py-2 text-sm text-white bg-accent hover:bg-accent-hover rounded-full transition-colors font-medium shadow-md shadow-accent/20"
             >
-              Değerlendirme Talebi
+              Demo Talebi
             </Link>
           </motion.div>
         </div>
@@ -184,7 +184,7 @@ export default function Header() {
                   className="inline-flex items-center justify-center w-full px-5 py-3 text-base text-white bg-accent hover:bg-accent-hover rounded-full transition-colors font-medium shadow-md shadow-accent/20"
                   onClick={toggleMenu}
                 >
-                  Değerlendirme Talebi
+                  Demo Talebi
                 </Link>
               </motion.div>
             </div>
